@@ -1,0 +1,4 @@
+*.m linguist-language=MATLAB
+*.xlsx linguist-vendored
+*.dat linguist-vendored
+*.pdf linguist-vendored
