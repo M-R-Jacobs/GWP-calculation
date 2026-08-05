@@ -22,7 +22,7 @@ Here is the collection of formulas referenced in the calculation file:
 **Radiative efficiency:** cross-section convolved with the Pinnock weighting function:
 
 $$
-RE_{inst} = \int \sigma(\nu) \cdot F(\nu)\, d\nu \times 10^{15}
+RE_{inst} = \int \sigma(\nu) \cdot F(\nu)\~ d\nu \times 10^{15}
 $$
 
 **Lifetime correction:** accounts for non-uniform mixing when lifetime, τ, is short:
@@ -49,7 +49,7 @@ $$
 **Climate-carbon feedback term:** the extra forcing from CO2 that natural sinks release in response to X's warming:
 
 $$
-\Delta AGWP_X(H) = \gamma \int_0^H AGTP_X(t)\, r_F(H-t)\, dt
+\Delta AGWP_X(H) = \gamma \int_0^H AGTP_X(t)\~ r_F(H-t)\, dt
 $$
 
 **GWP:** combine numerator and denominator:
