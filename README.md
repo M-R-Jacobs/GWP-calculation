@@ -17,6 +17,8 @@ is then AGWPX(H) divided by the equivalent AGWPCO2(H). Both numerator and denomi
 H=100 years, though figures for H=20 and H=500 are also reported. Importantly, each side of this fraction is not the forcing itself - because X and CO2 decay at different 
 rates and in different ways, you have to integrate their whole forcing trajectories over the time horizon, not just compare a snapshot like is done in the calculation of the RE.
 
+RE_calculation.m computes the input RE value this repo's GWP script consumes — see disclaimer below for authorship.
+
 Here is the collection of formulas referenced in the calculation file:
 
 **Radiative efficiency:** cross-section convolved with the Pinnock weighting function:
@@ -71,3 +73,5 @@ All four `a` coefficients sum to 1 (they're fractional weights of total pulse ma
 - `γ` = 11.06×10¹² kgCO2 yr⁻¹ K⁻¹ — the climate-carbon feedback coefficient (Gasser et al. 2017b). Converts a temperature increase into an equivalent mass of CO2 released from natural sinks per year per degree of warming.
 - `AGTPX(t)` — absolute global temperature potential: the temperature response at time t caused by a 1 kg pulse of X emitted at t=0 (computed via convolution of X's forcing decay with the two-layer climate response, this is the `AGTP_X` function using `lambda`, `a_f/a_s`, `tau_f/tau_s` in the script.)
 - `rF(t)` — the impulse response of *carbon release* per unit warming, itself a 3-exponential sum (`alpha_C`/`tau_C` in the script.) Weights 0.6368/0.3322/0.0031 at timescales 2.376/30.14/490.1 yr) which represent multiple processes on different timescales (like the CO2 IRF, just for the feedback pathway instead of the original pulse.)
+
+*Disclaimer on RE Calculation file: code entirely belongs to and was authored by Dr. Karine Le Bris (CSULA) and is only included in this repository so that all calculations may be redone without external efforts*
